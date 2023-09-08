@@ -22,7 +22,6 @@ module.exports = (sequelize, DataTypes) => {
     airplainId: {
       type:DataTypes.INTEGER,
       allowNull: false,
-      unique: true
     },
     departureAirportId:  {
       type:DataTypes.INTEGER,

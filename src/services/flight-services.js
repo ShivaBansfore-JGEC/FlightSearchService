@@ -24,22 +24,15 @@ class FlightService {
             throw {error}
         }
     }
+
+    async getAllFlightData(data){
+        try{
+            const flights = await this.flightRepository.getAllFlight(data);
+            return flights;
+        }catch(error){
+            throw {error};
+        }
+    }
 }
 
 module.exports = FlightService;
-
-/**
- * {
- * flightNumber,
- * airplainId,
- * departureAirportId,
- * arrivalAirportId,
- * arrivalTime,
- * departureTime,
- * price,
- * boardingGate,
- * totalSeats -> we will canlculate using airplaneId
- * }
- * 
- * 
- */
